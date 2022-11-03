@@ -1,14 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
-import Menu from './components/menu'
-
-
-function Primera() {
-
-  return <h1>Hola almi</h1>
-
-}
+import NavBar from './components/Menu/NavBar'
+import Greeting, { GreetingTitle } from './components/Menu/ItemListContainer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,8 +9,15 @@ function App() {
   return (
 
     <div>
-      <Menu/>
+      <NavBar/>
+        <GreetingTitle/>
+        <Greeting name='Molle' />
+        <Greeting name='Espinillo' />
+        <Greeting name='Quebracho' />
+        <Greeting name='Aromito' />
     </div>
+
+    
     
   )
 }
